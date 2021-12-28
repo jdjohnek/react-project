@@ -1,23 +1,12 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
-import Watchlist from './Watchlist';
-
-function MoviesHome(  ) {
 
 
+
+function Watchlist( ) {
     return (
         <>
-
         <div>
             <h1>REELZ</h1>
-        </div>
-
-        <div>
-            <input type="text" name="search-bar" id="" />
-        </div>
-
-        <div>
-            <h2>Movies of INSERT CURRENT YEAR</h2>
+            <h2>Watchlist</h2>
         </div>
 
         <div>
@@ -25,7 +14,7 @@ function MoviesHome(  ) {
             <p>
             {/* Insert current {Year} */}
                 <h3>Title</h3> 
-                <p>
+                
                 {/* Insert description from api */}
                 <h4>Description</h4>
                 </p>
@@ -37,14 +26,11 @@ function MoviesHome(  ) {
                  fontSize: 200 + '%' }}>&hearts;</span> 
                  </div>
 
-
-
-            </p>
+            <h3>Watched</h3>
+            <input type="checkbox" />
         </div>
         </>
-
     )
-    
 }
 
-export default MoviesHome;
+export default Watchlist;
