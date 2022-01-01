@@ -1,14 +1,11 @@
-// Configuration for TMDB API
+// URL for TMDB API
 
 const API_URL: string = 'https://api.themoviedb.org/3/';
-const API_KEY: string | undefined = process.env.REACT_APP_API_KEY;
+const API_KEY: string = process.env.REACT_APP_API_KEY || '';
 
-const SEARCH_BASE_URL: string = `${API_URL}search/movie?api_key=${API_KEY}&language=en-US&query=`;
-const POPULAR_BASE_URL: string = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US`;
-// For login and voting
-const REQUEST_TOKEN_URL: string = `${API_URL}authentication/token/new?api_key=${API_KEY}`;
-const LOGIN_URL: string = `${API_URL}authentication/token/validate_with_login?api_key=${API_KEY}`;
-const SESSION_ID_URL: string = `${API_URL}authentication/session/new?api_key=${API_KEY}`;
+const SEARCH_BASE_URL: string = `${API_URL}search/movie?api_key=a89f358c2a07e8f645436c6846440a45
+&language=en-US&query=`;
+const POPULAR_BASE_URL: string = `${API_URL}movie/popular?api_key=a89f358c2a07e8f645436c6846440a45&language=en-US`;
 
 const IMAGE_BASE_URL: string = 'http://image.tmdb.org/t/p/';
 // Sizes: w300, w780, w1280, original
@@ -24,7 +21,4 @@ export {
   IMAGE_BASE_URL,
   BACKDROP_SIZE,
   POSTER_SIZE,
-  REQUEST_TOKEN_URL,
-  LOGIN_URL,
-  SESSION_ID_URL,
 };

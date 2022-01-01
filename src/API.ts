@@ -23,25 +23,6 @@ export type Movies = {
   total_results: number;
 };
 
-export type Cast = {
-  character: string;
-  credit_id: string;
-  name: string;
-  profile_path: string;
-};
-
-export type Crew = {
-  job: string;
-  name: string;
-  credit_id: number;
-};
-
-export type Credits = {
-  id: number;
-  cast: Cast[];
-  crew: Crew[];
-};
-
 export default {
   fetchMovies: async (searchTerm: string, page: number): Promise<Movies> => {
     const endpoint: string = searchTerm
@@ -53,8 +34,5 @@ export default {
     const endpoint: string = `${API_URL}movie/${movieId}?api_key=${API_KEY}`;
     return await (await fetch(endpoint)).json();
   },
-  fetchCredits: async (movieId: string): Promise<Credits> => {
-    const creditsEndpoint: string = `${API_URL}movie/${movieId}/credits?api_key=${API_KEY}`;
-    return await (await fetch(creditsEndpoint)).json();
-  },
+
 };

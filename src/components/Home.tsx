@@ -9,7 +9,8 @@ import Thumb from './Thumb';
 import Spinner from './Spinner';
 import SearchBar from './Searchbar';
 import Button from './Button';
-
+// Image
+import NoImage from '../images/no_image.jpg';
 // Hook
 import { useHomeFetch } from '../Hooks/useHomeFetch';
 
@@ -30,14 +31,17 @@ const Home: React.FC = () => {
 
   return (
     <>
-
       <SearchBar setSearchTerm={setSearchTerm} />
       <Grid header={searchTerm ? 'Search Result' : 'Popular Movies'}>
         {state.results.map(movie => (
           <Thumb
             key={movie.id}
             clickable
-            image={movie.poster_path= IMAGE_BASE_URL + POSTER_SIZE + movie.poster_path}
+            image={
+              movie.poster_path
+                ? IMAGE_BASE_URL + POSTER_SIZE + movie.poster_path
+                : NoImage
+            }
             movieId={movie.id}
           />
         ))}

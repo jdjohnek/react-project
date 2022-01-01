@@ -17,12 +17,7 @@ export const Content = styled.div`
   margin: 0 auto;
   border-radius: 40px;
   color: var(--white);
-  img {
-    position: absolute;
-    left: 15px;
-    top: 14px;
-    width: 30px;
-  }
+
   input {
     font-size: var(--fontBig);
     position: absolute;

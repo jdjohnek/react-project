@@ -6,6 +6,13 @@
     align-items: center;
 }
 
+.navbar h1 {
+    color: white;
+    align-items: center;
+    position: relative;
+    left: 250px;
+}
+
 .menu-bars {
     margin-left: 2rem;
     font-size: 2rem;
