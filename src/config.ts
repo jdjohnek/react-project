@@ -5,7 +5,9 @@ const API_KEY: string = process.env.REACT_APP_API_KEY || '';
 
 const SEARCH_BASE_URL: string = `${API_URL}search/movie?api_key=${API_KEY}
 &language=en-US&query=`;
-const POPULAR_BASE_URL: string = `${API_URL}movie/popular?api_key=${API_KEY}&language=en-US`;
+const POPULAR_BASE_URL: string = `${API_URL}movie/popular?api_key=${API_KEY}
+&language=en-US`;
+const GENRE_BASE_URL: string = `${API_URL}genre/movie/list?api_key=${API_KEY}=en-US`;
 
 const IMAGE_BASE_URL: string = 'http://image.tmdb.org/t/p/';
 // Sizes: w300, w780, w1280, original
@@ -16,6 +18,7 @@ const POSTER_SIZE: string = 'w780';
 export {
   SEARCH_BASE_URL,
   POPULAR_BASE_URL,
+  GENRE_BASE_URL,
   API_URL,
   API_KEY,
   IMAGE_BASE_URL,

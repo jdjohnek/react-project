@@ -21,7 +21,7 @@ export const Content = styled.div`
   input {
     font-size: var(--fontBig);
     position: absolute;
-    left: 0;
+    left: 240px;
     margin: 8px 0;
     padding: 0 0 0 60px;
     border: 0;
